@@ -7,6 +7,6 @@ public class App {
 
         XUV xuv = new XUV();
         xuv.start();
-        xuv.steer(30.7, 3, 6);
+        xuv.steer(31.7, 3, 6);
     }
 }
