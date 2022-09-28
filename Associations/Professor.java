@@ -50,11 +50,31 @@ public class Professor {
         return friends;
     }
 
-    public List<Professor> getFriends(String name) {
-        ArrayList<Professor> friendsOfX = new ArrayList<>();
+    /**
+     * Returns the first friend of this Professor with the specified name.
+     * Returns null of not found
+     * @param name - name of the friend
+     * @return {@value}Professor
+     */
+    public Professor getFriend(String name) {
         for (Professor f : this.friends)
             if (f.name.equals(name))
-                friendsOfX.add(f);
-        return friendsOfX;
+                return f;
+        return null;
+    }
+
+    /**
+     * Returns the professor with the specified ID.
+     * Returns null if not found
+     * @param professorID - ID of the professor
+     * @return {@value} Professor
+     */
+    public Professor getFriend(int professorID) {
+        for(Professor p : friends) {
+            if(p.professorID == professorID) {
+                return p;
+            }
+        }
+        return null;
     }
 }
