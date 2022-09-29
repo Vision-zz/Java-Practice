@@ -3,15 +3,14 @@ import java.util.List;
 public class University {
     private List<Department> departments;
     private String name = "No Name University";
-    private static University university = null;
 
+    // Singleton class 
+    private static University university = null;
     public static University getInstance() {
         if (university == null)
             university = new University();
         return university;
     }
-
-    // Singleton class 
     private University() {
     }
 
