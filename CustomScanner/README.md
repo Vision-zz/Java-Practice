@@ -5,7 +5,7 @@ Built for those who don't want to deal with the inbuilt Scanner class from java.
 
 ## Features
 - Multiple functions to get primitive data type inputs
- > String, int, double, float, long, char
+  > String, int, double, float, long, char
 - Get input with a prompt
 
 ## Functions
