@@ -1,3 +1,5 @@
+package CustomScanner;
+
 public class Example {
     public static void main(String[] args) {
         String stringInput = CustomScanner.getString("Enter the string");

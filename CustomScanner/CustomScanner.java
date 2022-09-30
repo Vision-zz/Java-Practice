@@ -1,3 +1,5 @@
+package CustomScanner;
+
 public class CustomScanner {
     private CustomScanner() {
     }
