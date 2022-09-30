@@ -1,18 +1,20 @@
 package Associations;
 
-public class Main {
+import java.util.ArrayList;
 
-    static {
-        University university = University.getInstance();
-        String[] deptStrings = { "Mechanical", "Aero", "Automobile", "Mechatronics", "Biotech" };
-        for(String dept : deptStrings) {
-            university.addDepartment(new Department(dept));
-        }
-    }
+public class Main {
 
     public static void main(String[] args) {
 
-        // Implement all features like adding depts, professors, friends of professors and stuff.
+        ArrayList<Department> departments = new ArrayList<Department>();
+        departments.add(new Department("Mechanical"));
+        departments.add(new Department("Aeronautical"));
+        departments.add(new Department("Automobile"));
+        University university = new University("Dummy University", departments);
+        System.out.println(university.getName());
+
+        // Implement all other features.
+        // Like adding more depts, professors, friends of professors and stuff.
         // Im just lazy, create pull request and I might merge it. Thanks :)
 
     }

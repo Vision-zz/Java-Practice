@@ -7,15 +7,13 @@ public class Professor {
 
     private String name;
     private int age;
-    private int professorID;
-    private Department department;
-    private List<Professor> friends;
+    private final int professorID;
+    private final List<Professor> friends;
     static private int ID = 1;
 
-    Professor(String name, int age, Department department) {
+    Professor(String name, int age) {
         this.name = name;
         this.age = age;
-        this.department = department;
         this.professorID = ID++;
         friends = new ArrayList<Professor>();
     }
@@ -24,7 +22,7 @@ public class Professor {
         return this.name;
     }
 
-    public void ediName(String name) {
+    public void editName(String name) {
         this.name = name;
     }
 
@@ -38,10 +36,6 @@ public class Professor {
 
     public int getProfessorID() {
         return this.professorID;
-    }
-
-    public Department getDepartment() {
-        return this.department;
     }
 
     public void addFriend(Professor professor) {

@@ -1,13 +1,19 @@
 package Associations;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Department {
-    private List<Professor> activeProfessors;
-    private String name;
+    private final List<Professor> activeProfessors;
+    private final String name;
 
     Department(String name) {
+        this.activeProfessors = new ArrayList<Professor>();
         this.name = name;
+    }
+
+    public void addProfessor(Professor professor) {
+        activeProfessors.add(professor);
     }
 
     public void printActiveProfessors() {
@@ -39,4 +45,5 @@ public class Department {
     public String getName() {
         return this.name;
     }
+
 }

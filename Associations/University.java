@@ -3,21 +3,12 @@ package Associations;
 import java.util.List;
 
 public class University {
-    private List<Department> departments;
-    private String name = "No Name University";
+    private final List<Department> departments;
+    private final String name;
 
-    // Singleton class 
-    private static University university = null;
-    public static University getInstance() {
-        if (university == null)
-            university = new University();
-        return university;
-    }
-    private University() {
-    }
-
-    public void setName(String name) {
+    public University(String name, List<Department> departments) {
         this.name = name;
+        this.departments = departments;
     }
 
     public void printName() {
@@ -32,6 +23,17 @@ public class University {
         this.departments.add(department);
     }
 
+    public Department getDepartmentByName(String name) {
+        for (Department d : this.departments)
+            if (d.getName().equals(name))
+                return d;
+        return null;
+    }
+
+    public void removeDepartment(Department department) {
+        this.departments.remove(department);
+    }
+
     public void listAllDepartments() {
         String departmentString = "";
         for (Department p : this.departments) {
@@ -43,4 +45,5 @@ public class University {
     public List<Department> getAllDepartments() {
         return departments;
     }
+
 }
