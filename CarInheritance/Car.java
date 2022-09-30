@@ -6,13 +6,14 @@ import CarInheritance.Enums.SteeringType;
 abstract class Car {
 
     private double steeringAngle = 0.0;
-    SteeringType steerType = SteeringType.MECHANICAL;
-    final StartType startType;
+    public final SteeringType steerType;
+    public final StartType startType;
     boolean started = false;
 
     abstract void start();
 
-    Car(StartType startType) {
+    Car(StartType startType, SteeringType steeringType) {
+        this.steerType = steeringType;
         this.startType = startType;
     }
 
