@@ -1,8 +1,9 @@
-import Enums.StartType;
-import Enums.SteeringType;
+package CarInheritance;
+
+import CarInheritance.Enums.StartType;
+import CarInheritance.Enums.SteeringType;
 
 public class XUV extends Car{
-    
     
     XUV() {
         this.steerType = SteeringType.HYDRAULIC;

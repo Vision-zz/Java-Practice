@@ -1,5 +1,7 @@
-import Enums.StartType;
-import Enums.SteeringType;
+package CarInheritance;
+
+import CarInheritance.Enums.StartType;
+import CarInheritance.Enums.SteeringType;
 
 abstract class Car {
 

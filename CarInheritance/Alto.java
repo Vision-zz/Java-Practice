@@ -1,7 +1,9 @@
+package CarInheritance;
+
 import java.util.Scanner;
 
-import Enums.StartType;
-import Enums.SteeringType;
+import CarInheritance.Enums.StartType;
+import CarInheritance.Enums.SteeringType;
 
 public class Alto extends Car {
 
@@ -15,7 +17,7 @@ public class Alto extends Car {
     @Override
     void start() {
 
-        if(this.started) {
+        if (this.started) {
             System.out.println("Car is already started");
             return;
         }
@@ -39,8 +41,5 @@ public class Alto extends Car {
         this.started = true;
         System.out.println("Car is started");
     }
-
-    
-
 
 }

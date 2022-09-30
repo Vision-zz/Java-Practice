@@ -1,4 +1,4 @@
-package Enums;
+package CarInheritance.Enums;
 
 public enum StartType {
     KEY,
