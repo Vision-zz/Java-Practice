@@ -1,3 +1,5 @@
+package Associations;
+
 import java.util.List;
 
 public class University {

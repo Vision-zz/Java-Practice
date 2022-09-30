@@ -1,3 +1,5 @@
+package Associations;
+
 import java.util.ArrayList;
 import java.util.List;
 

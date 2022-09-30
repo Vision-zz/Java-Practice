@@ -1,3 +1,5 @@
+package Associations;
+
 public class Main {
 
     static {
