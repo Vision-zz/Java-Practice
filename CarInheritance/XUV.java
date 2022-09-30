@@ -6,8 +6,7 @@ import CarInheritance.Enums.SteeringType;
 public class XUV extends Car{
     
     XUV() {
-        this.steerType = SteeringType.HYDRAULIC;
-        this.startType = StartType.BUTTON;
+        super(StartType.BUTTON, SteeringType.HYDRAULIC);
     }
 
     @Override

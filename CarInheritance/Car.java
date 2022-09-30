@@ -7,10 +7,14 @@ abstract class Car {
 
     private double steeringAngle = 0.0;
     SteeringType steerType = SteeringType.MECHANICAL;
-    StartType startType = StartType.KEY;
+    final StartType startType;
     boolean started = false;
 
     abstract void start();
+
+    Car(StartType startType) {
+        this.startType = startType;
+    }
 
     public void steer(double steeringAngle, int steerPower, int steerTime) {
         int requiredSteerPower = this.getSteerPower();
@@ -35,7 +39,7 @@ abstract class Car {
     public void currentSteer() {
         System.out.println(this.steeringAngle);
     }
-    
+
     public void carStartType() {
         System.out.println(this.startType);
     }

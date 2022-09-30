@@ -10,8 +10,7 @@ public class Alto extends Car {
     boolean keyInserted = false;
 
     Alto() {
-        this.steerType = SteeringType.POWER;
-        this.startType = StartType.KEY;
+        super(StartType.KEY, SteeringType.POWER);
     }
 
     @Override
