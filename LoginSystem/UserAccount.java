@@ -21,6 +21,10 @@ public class UserAccount {
         this.username = username;
     }
 
+    public String getPassword() {
+        return this.password;
+    }
+
     public void changePassword() {
 
         while (true) {
