@@ -1,6 +1,6 @@
 package LoginSystem;
 
-import CustomScanner.CustomScanner;
+import CustomScanner.Scanner;
 
 public class UserAccount {
     private String username;
@@ -28,7 +28,7 @@ public class UserAccount {
     public void changePassword() {
 
         while (true) {
-            String oldPassword = CustomScanner.getString("Enter old password [Press X to cancel]");
+            String oldPassword = Scanner.getString("Enter old password [Press X to cancel]");
             if (oldPassword.equals("X")) {
                 System.out.println("Cancelled operation");
                 return;
@@ -41,7 +41,7 @@ public class UserAccount {
         }
 
         while (true) {
-            String newPass = CustomScanner.getString("Enter new password [Press X to cancel]");
+            String newPass = Scanner.getString("Enter new password [Press X to cancel]");
             if (newPass.equals("X")) {
                 System.out.println("Cancelled operation");
                 return;
@@ -51,7 +51,7 @@ public class UserAccount {
                 continue;
             }
 
-            String confirmPass = CustomScanner.getString("Confirm new password [Press X to cancel]");
+            String confirmPass = Scanner.getString("Confirm new password [Press X to cancel]");
             if (confirmPass.equals("X")) {
                 System.out.println("Cancelled operation");
                 return;

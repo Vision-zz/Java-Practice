@@ -1,7 +1,7 @@
 package CustomScanner;
 
-public class CustomScanner {
-    private CustomScanner() {
+public class Scanner {
+    private Scanner() {
     }
 
     public static String getString() {
