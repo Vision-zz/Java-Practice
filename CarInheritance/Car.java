@@ -10,12 +10,12 @@ abstract class Car {
     public final StartType startType;
     boolean started = false;
 
-    abstract void start();
-
     Car(StartType startType, SteeringType steeringType) {
         this.steerType = steeringType;
         this.startType = startType;
     }
+
+    abstract void start();
 
     public void steer(double steeringAngle, int steerPower, int steerTime) {
         int requiredSteerPower = this.getSteerPower();
